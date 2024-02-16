@@ -1,0 +1,14 @@
+version: "3.8"
+
+services:
+  servidor-js:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8080:80"
+    volumes:
+      - html_volume:/usr/share/nginx/html
+
+volumes:
+  html_volume:
